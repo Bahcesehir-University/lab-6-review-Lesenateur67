@@ -137,7 +137,7 @@ public:
     // Two students are equal if they have the same id
     bool operator==(const Student& other) const {
         // YOUR CODE HERE
-        if(other.id==this.id)
+        if(other.id==id)
         {
             return true;
         }
@@ -148,7 +148,7 @@ public:
     // Compare by GPA (lower GPA = "less than")
     bool operator<(const Student& other) const {
         // YOUR CODE HERE
-        if (this.gpa<other.gpa)
+        if (gpa<other.gpa)
         {
             return true;
         }
