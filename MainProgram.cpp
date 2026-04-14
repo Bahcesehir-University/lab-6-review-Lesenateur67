@@ -156,7 +156,7 @@ public:
     // Example: "Student(Ali, ID: 101, GPA: 3.5)"
     friend ostream& operator<<(ostream& os, const Student& s) {
         // YOUR CODE HERE
-        os <<"Student("<<s.name", ID: "<<id<<", GPA: "<<gpa<<std::endl;
+        os <<"Student("<<s.name<<", ID: "<<id<<", GPA: "<<gpa<<std::endl;
         return os;
     }
 };
