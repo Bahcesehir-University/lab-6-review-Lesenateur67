@@ -67,11 +67,7 @@ public:
     // Print: "Student [name] destroyed"
     ~Student() {
         // YOUR CODE HERE
-        gpa=0.0;
-        id=0;
-        name="Unknown";
-        std::cout << "Student " << name << " destroyed" << 
-        std::endl;
+        std::cout << "Student " << name << " destroyed" << std::endl;
     }
 
     // ----- Task 2: Getters (Encapsulation) -----
@@ -137,7 +133,7 @@ public:
     // Two students are equal if they have the same id
     bool operator==(const Student& other) const {
         // YOUR CODE HERE
-        if(other.id==id)
+        if(id==other.id)
         {
             return true;
         }
@@ -160,9 +156,7 @@ public:
     // Example: "Student(Ali, ID: 101, GPA: 3.5)"
     friend ostream& operator<<(ostream& os, const Student& s) {
         // YOUR CODE HERE
-        os<<s.name;
-        os<<s.gpa;
-        os<<s.id;
+        os <<"Student("<<s.name", ID: "<<id<<", GPA: "<<gpa<<std::endl;
         return os;
     }
 };
