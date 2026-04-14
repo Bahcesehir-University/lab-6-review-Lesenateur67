@@ -137,7 +137,7 @@ public:
     // Two students are equal if they have the same id
     bool operator==(const Student& other) const {
         // YOUR CODE HERE
-        if(other.id==id)
+        if(other.id==this.id)
         {
             return true;
         }
@@ -148,7 +148,7 @@ public:
     // Compare by GPA (lower GPA = "less than")
     bool operator<(const Student& other) const {
         // YOUR CODE HERE
-        if (gpa<other.gpa)
+        if (this.gpa<other.gpa)
         {
             return true;
         }
@@ -175,10 +175,10 @@ public:
 // Version 1: Takes two Student references, returns the one with higher GPA
 Student findBestStudent(const Student& a, const Student& b) {
     // YOUR CODE HERE
-    if(b.getGpa()>a.getGpa()){
-        return b;
+    if(b<a){
+        return a;
     }
-    return a;
+    return b;
 }
 
 // Version 2: Takes an array of Students and its size, returns the one with highest GPA
